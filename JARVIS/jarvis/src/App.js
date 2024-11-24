@@ -1,9 +1,14 @@
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import TaskInput from "./components/TaskInput";
+import TaskList from "./components/TaskList";
+import ProgressBar from "./components/ProgressBar";
+
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Task Manager</h1>
-      </header>
+    <div className={`app ${theme}`}>
+      <Header toggleTheme={toggleTheme} theme={theme} />
     </div>
   );
 }
