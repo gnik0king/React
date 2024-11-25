@@ -30,20 +30,20 @@ function App() {
       const newTheme = prevTheme === "light" ? "dark" : "light";
       console.log("Theme changed to: ", newTheme);
       return newTheme;
-  });
+    });
   };
 
   return (
-    <div style={{margin: 'auto'}}>
-    <div className={`app ${theme}`}>
-      <Header toggleTheme={toggleTheme} theme={theme} />
-      <TaskInput addTask={addTask} />
-      <ProgressBar tasks={tasks} />
-      <TaskList
-        tasks={tasks}
-        toggleComplete={toggleComplete}
-        deleteTask={deleteTask}
-      />
+    <div style={{ margin: "auto" }}>
+      <div className={`app ${theme}`}>
+        <Header toggleTheme={toggleTheme} theme={theme} />
+        <TaskInput addTask={addTask} />
+        <ProgressBar tasks={tasks} />
+        <TaskList
+          tasks={tasks}
+          toggleComplete={toggleComplete}
+          deleteTask={deleteTask}
+        />
       </div>
     </div>
   );
